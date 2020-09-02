@@ -277,6 +277,7 @@ aside .way .left .down{
     left: 0.2rem;
 }
 aside .grab{
+    position: relative;
     height: 99%;
     padding-top: 1.3rem;
     /* line-height: 2rem; */
@@ -284,6 +285,29 @@ aside .grab{
     padding-bottom: 1rem;   
     
 }
+
+aside .grab::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 0);
+}
+
+aside .grab::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 0);
+}
+
+
 aside .grab h2{
     text-align: center;
     color: white;
@@ -304,17 +328,17 @@ aside .grab h2{
 
 #text {
     height: 100%;
-    background-image: url(../image/motto.jpg);
-    background-repeat: no-repeat;    
+    /* background-image: url(../image/motto.jpg); */
+    /* background-repeat: no-repeat;    
     background-size: cover;
     background-attachment: fixed; 
-    background-position: center center;
+    background-position: center center; */
     margin-top: 2rem;   
     
 }
 
 #text .need, #text .want {
-    background-color: rgba(0, 63, 114, 0.5);
+    background-color: rgba(20, 83, 164, 1);
 }
 
 #text .need h3, #text .want h3{
@@ -327,10 +351,15 @@ aside .grab h2{
 }
 
 #text .need p, #text .want p{
+    display: inline-block;
     /* background-color: rgba(0, 63, 114, 0.5); */
     line-height: 1.5rem;
     font-size: 1.25rem;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+    text-align: right;
+}
+#text .want span{
+    display: inline-block;
     text-align: left;
 }
 
