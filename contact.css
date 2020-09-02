@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+
+
+body .back{
+    position: fixed;
+    width: 50px;
+    height: 30px;
+    top: 20px;
+    left: 20px;
+}
+.aLink{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.back img{
+    width: 80%;
+    height: 80%;    
+}
+
+.contact {
+    height: 100%;
+    background-image: url(../image/beach-4206785_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    padding: 2rem 1rem;   
+}
+
+.contact h1 {
+    font-family: 'Saira condenset', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    
+    color:black;
+    text-align: center;
+    padding-left: 20px;
+    text-shadow: 2px 2px 5px rgba(13, 110, 139, 0.65);
+}
+
+.contact .socials {    
+    height: 100%;
+    font-size: 1.0rem;
+    color: black;
+    font-family: 'Roboto Mono', monospace;    
+    text-shadow: 2px 2px 5px rgba(13, 110, 139, 0.65);    
+}
+
+.contact .mail{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 20vh 15vh ;
+    grid-template-areas:'. mail .'
+    '. adres .' ;
+    transition: 2s;
+}
+
+.contact .phon {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 20vh 15vh ;
+    grid-template-areas:'. phon .'
+    '. number .' ;
+    transition: 2s;
+}
+
+.contact .mail img{
+    grid-area: mail;
+    margin: 0 auto;  
+} 
+
+.contact .mail span{
+    grid-area: adres;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+} 
+
+.contact .phon img{
+    grid-area: phon;
+    margin: 0 auto;    
+}
+
+.contact .phon span{
+    grid-area: number;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;    
+}
+
+.contact .mail img:hover{
+    transform: rotate(90deg);
+}
+
+.contact .phon img:hover{
+    transform: rotate(90deg);
+}
+
+footer{
+    display: flexbox;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    padding-left: 1rem;
+}
+
+footer h3 {
+    margin-right: 1rem;
+}
+
+footer .autor{
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+@media (min-width: 533px) {
+    /* .contact .social {
+        display: inline-block;
+        width: 50%;
+    } */
+}
+
+@media (min-width: 1024px) {
+    .contact h1 {
+        font-size: 60px;
+        padding: 30px 0;
+    }
+
+    
+    .contact .socials {
+        
+        width: 50%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }    
+}
