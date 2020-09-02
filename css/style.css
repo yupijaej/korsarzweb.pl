@@ -191,8 +191,8 @@ header .slogans > h2{
 
 /*Aside*/
 aside{
-    height: 57%;
-    background-color: rgba(255,0,0,0.5);
+    /* height: 57%; */
+    /* background-color: rgba(255,0,0,0.5); */
 }
 
 aside .way {
@@ -278,11 +278,12 @@ aside .way .left .down{
 }
 aside .grab{
     position: relative;
-    height: 99%;
+    /* height: 99%; */
     padding-top: 1.3rem;
     /* line-height: 2rem; */
     margin-bottom: 2rem;
-    padding-bottom: 1rem;   
+    padding-bottom: 1rem; 
+    background-color: rgba(255,0,0,0.5);  
     
 }
 
@@ -518,6 +519,18 @@ aside .way .left .down{
 aside .grab{
     padding-top: 3rem;   
 }
+
+aside .grab::before{
+    width: 40px;
+    height: 40px;
+   
+}
+
+aside .grab::after{   
+    width: 40px;
+    height: 40px;    
+}
+
 aside .grab h2{
     line-height: 4rem;
     font-size: 3rem;
@@ -740,7 +753,7 @@ header .slogans > h2{
 
 /*Aside*/
 aside{
-    height: 82vh;
+    /* height: 82vh; */
 }
 /***************************/
 aside .way {
