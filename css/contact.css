@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    height: 130vh;
+    font-family: 'Roboto Mono', monospace; 
 }
 
 
@@ -44,11 +45,22 @@ body .back{
     text-shadow: 2px 2px 5px rgba(13, 110, 139, 0.65);
 }
 
+.contact p {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+
+}
+
 .contact .socials {    
     height: 100%;
-    font-size: 1.0rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     color: black;
-    font-family: 'Roboto Mono', monospace;    
+    /* font-family: 'Roboto Mono', monospace;     */
     text-shadow: 2px 2px 5px rgba(13, 110, 139, 0.65);    
 }
 
