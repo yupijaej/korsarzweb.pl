@@ -1,0 +1,363 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+body {
+    /* height: 100vh; */
+    overflow: hidden;   
+}
+
+/*  NAV  */
+
+/* Nav return back*/
+body .back{
+    position: fixed;
+    width: 50px;
+    height: 30px;
+    top: 20px;
+    left: 20px;
+}
+
+.aLink{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.back img{
+    width: 80%;
+    height: 80%;
+    
+}
+
+/* Nav contact*/
+
+body .contact{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+}
+
+.aLink{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.contact img{
+    width: 80%;
+    height: 80%;
+    
+}
+
+/* TEXT*/
+
+body .text{
+    display: flex;
+
+    background-color: #118F65;
+    margin: 0 auto;
+    height: 30vh;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* color: coral; */
+}
+
+body .text h1{
+    color: coral;
+    margin-bottom: 1rem;
+}
+
+body .text h3{
+    color: black;
+    text-align: center;
+    font-size: 1.0rem;
+}
+
+body .text h2{
+    color: red;
+    text-shadow: 2px 2px 5px black;
+}
+
+  /*  ANIMATION  */
+#sky {
+    position: relative;
+    height: 50vh;
+    background-color: skyblue;
+    -webkit-animation: sky 8s linear infinite;
+    animation: sky 8s linear infinite;
+}
+  
+.sun {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 30px orange;
+    box-shadow: 0 0 30px orange;
+    -webkit-animation: sun 8s linear infinite;
+    animation: sun 8s linear infinite;
+}
+  
+#ground {
+    position: relative;
+    height: 50vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6a3434), to(#000000));
+    background-image: linear-gradient(to bottom, #6a3434, #000000);
+}
+  
+#ground .road {
+    position: relative;
+    width: 100%;
+    height: 65%;
+    background-image: -webkit-gradient(linear, left top, right top, from(#545454), color-stop(#414141), to(#545454));
+    background-image: linear-gradient(to right, #545454, #414141, #545454);
+}
+  
+#ground .grass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%;
+    background-image: -webkit-gradient(linear, left top, right top, from(#22ff00), color-stop(#2fbf43), to(#27ff00));
+    background-image: linear-gradient(to right, #22ff00, #2fbf43, #27ff00);
+}
+  
+#ground .grass::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, left top, right top, from(#22ff00), color-stop(#2fbf43), to(#27ff00));
+    background-image: linear-gradient(to right, #22ff00, #2fbf43, #27ff00);
+    position: absolute;
+    top: 30vh;
+    left: 0;
+}
+  
+#ground .road .car {
+    position: absolute;
+    top: 12vh;
+    left: 30%;
+    width: 120px;
+    height: 40px;
+    background-color: #df8d23;
+    -webkit-animation: car 8s ease-in infinite;
+    animation: car 8s ease-in infinite;
+}
+  
+#ground .road .car::before {
+    content: '';
+    position: absolute;
+    top: -5vh;
+    left: 10%;
+    width: 100px;
+    height: 35px;
+    background-color: #df8d23;
+    border-radius: 20px 20px 0 0px;
+}
+  
+.car .frontWindow {
+    position: absolute;
+    top: -4.3vh;
+    left: 10%;
+    width: 40px;
+    height: 30px;
+    background-color: #2336df;
+    border-radius: 10px 0px 0 0px;
+}
+  
+.car .rearWindow {
+    position: absolute;
+    top: -4.3vh;
+    left: 60%;
+    width: 40px;
+    height: 30px;
+    background-color: #2336df;
+    border-radius: 0px 10px 0 0px;
+}
+  
+.car .frontWheel {
+    position: absolute;
+    top: 4.3vh;
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    border-color: white;
+    border-style: dashed;
+    background-color: #000000;
+    border-radius: 50%;
+    -webkit-animation: wheel1 2s infinite linear;
+    animation: wheel1 2s infinite linear;
+}
+  
+.car .rearWheel {
+    position: absolute;
+    top: 4.3vh;
+    left: 60%;
+    width: 30px;
+    height: 30px;
+    border-color: white;
+    border-style: dashed;
+    background-color: #000000;
+    border-radius: 50%;
+    -webkit-animation: wheel 8s linear infinite;
+    animation: wheel 8s linear infinite;
+}
+  
+@-webkit-keyframes sun {
+    0% {
+      top: 40px;
+    }
+    20% {
+      top: 40px;
+    }
+    50% {
+      top: 500px;
+    }
+    100% {
+      top: 40px;
+    }
+}
+  
+@keyframes sun {
+    0% {
+      top: 40px;
+    }
+    20% {
+      top: 40px;
+    }
+    50% {
+      top: 500px;
+    }
+    100% {
+      top: 40px;
+    }
+}
+  
+@-webkit-keyframes car {
+    from {
+      left: -150px;
+    }
+    to {
+      left: 1600px;
+    }
+}
+  
+@keyframes car {
+    from {
+      left: -150px;
+    }
+    to {
+      left: 1600px;
+    }
+}
+  
+@-webkit-keyframes wheel {
+    from {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+}
+  
+@keyframes wheel {
+    from {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+}
+  
+@-webkit-keyframes sky {
+    0% {
+      background-color: black;
+    }
+    40% {
+      background-color: skyblue;
+    }
+    60% {
+      background-color: skyblue;
+    }
+    100% {
+      background-color: black;
+    }
+}
+  
+@keyframes sky {
+    0% {
+      background-color: black;
+    }
+    40% {
+      background-color: skyblue;
+    }
+    60% {
+      background-color: skyblue;
+    }
+    100% {
+      background-color: black;
+    }
+}
+  /*Footer*/
+/* footer{
+    display: flexbox;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    padding-left: 1rem;
+}
+
+footer h3 {
+    margin-right: 1rem;
+}
+
+footer .autor{
+    display: inline-block;
+    padding-left: 1rem;
+} */
+
+@media (min-width: 411px){    
+    body .text h1{
+        font-size: 2.5rem;
+    }
+    
+    body .text h3{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    body .text h2{
+        font-size: 1.8rem;
+    }
+
+}
+
+@media (min-width: 768px){    
+    body .text h1{
+        font-size: 3rem;
+    }
+    
+    body .text h3{
+        font-size: 2rem;
+        margin-bottom: 1.3rem;
+    }
+    
+    body .text h2{
+        font-size: 2.2rem;
+    }
+
+}
