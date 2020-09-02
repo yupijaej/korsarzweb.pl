@@ -39,8 +39,13 @@ body{
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 0,0.75);
-    animation: square 10s linear infinite;
-
+    animation: square 20s linear infinite;
+}
+.square a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
 }
 
 .circle{
@@ -48,9 +53,12 @@ body{
     bottom: 0;    
     background-color: rgba(0, 255, 0,0.75);
     border-radius: 50%;
-    animation: circle 10s infinite;
+    animation: circle 20s infinite;
 }
 .circle a{
+    display: block;
+    height: 100%;
+    width: 100%;
     opacity: 0;
 }
 
